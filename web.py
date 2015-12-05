@@ -19,12 +19,12 @@ templates = [
         'id': 1,
         'title': 'More Lights!',
         'author': 'unknown',
-        'content': 'Did you ever have one of those [noun] ? Well today [person] did! Mom '
+        'content': 'Did you ever have one of those [nouns] ? Well today [person] did! Mom '
                    'wanted to [verb] [nouns] up for [holiday] . Not just any lights, '
                    '[color] lights. [Adjective] [color] lights! [Adjective] bright red '
                    'lights. The only problem, they are a [verb/ed] mess! Not to mention '
                    'that there are some [vegetable], yellow and green lights [verb/ed] '
-                   'in. "[person] !" I yell! This can\'t be done! She could [verb] I was '
+                   'in. " [person] !" I yell! This can\'t be done! She could [verb] I was '
                    'right and went out and [verb] some new shiny [color] lights!'
     },
     {
@@ -46,9 +46,9 @@ templates = [
         'author': 'unknown',
         'content': 'Pizza was invented by a [adjective] [nationality] chef named [person] . '
                    'To make a pizza, you need to take a lump of [noun] , and make a thin, '
-                   'round [adjective] [noun]. Then you cover it with [adjective] sauce, '
+                   'round [adjective] [noun] . Then you cover it with [adjective] sauce, '
                    '[adjective] chees, and fresh chopped [noun/s] . Next you have to bake '
-                   'it in a very hot [noun]. When it is done, cut it into [number] [shapes] . '
+                   'it in a very hot [noun] . When it is done, cut it into [number] [shapes] . '
                    'Some kids like [food] pizza the best, but my favorite is the [food] pizza. '
                    'If I could, I would eat pizza [number] times a day!'
     }
