@@ -8,7 +8,7 @@ templates = [
         'title': 'Christmas Tree',
         'author': 'unknown',
         'content': 'Every [month] we [verb] to a tree [place] far away. not just any '
-                   '[adjective] farm, a [adjective] tree [place]. My dad and I [verb] '
+                   '[adjective] farm, a [adjective] tree [place] . My dad and I [verb] '
                    'onto the [noun] to [verb] for the perfect [noun]. Some people live '
                    '[adjective] and [adjective] and some like them [color] and fat. We '
                    'are searching for a tall and [adjective] one! "Over there!" I '
@@ -20,11 +20,11 @@ templates = [
         'title': 'More Lights!',
         'author': 'unknown',
         'content': 'Did you ever have one of those [noun]? Well today [person] did! Mom '
-                   'wanted to [verb] [nouns] up for [holiday]. Not just any lights, '
+                   'wanted to [verb] [nouns] up for [holiday] . Not just any lights, '
                    '[color] lights. [Adjective] [color] lights! [Adjective] bright red '
                    'lights. The only problem, they are a [verb/ed] mess! Not to mention '
                    'that there are some [vegetable], yellow and green lights [verb/ed] '
-                   'in. "[person]!" I yell! This can\'t be done! She could [verb] I was '
+                   'in. "[person] !" I yell! This can\'t be done! She could [verb] I was '
                    'right and went out and [verb] some new shiny [color] lights!'
     },
     {
@@ -32,23 +32,23 @@ templates = [
         'title': 'Turkey Dinner!',
         'author': 'unknown',
         'content': 'I spent last summer on my grandfather\'s [adjective] farm. He raises '
-                   '[noun/s] for local food [noun/s]. He also grows corn on the [noun], '
-                   '[adjective] lettuce and lima [noun/s]. My favorite place to [verb] '
+                   '[noun/s] for local food [noun/s] . He also grows corn on the [noun], '
+                   '[adjective] lettuce and lima [noun/s] . My favorite place to [verb] '
                    'on the farm is the [adjective] house where grandfather keeps his '
-                   '[noun/s]. But when I visit in November, there are no [noun/s]! They '
+                   '[noun/s] . But when I visit in November, there are no [noun/s] ! They '
                    'are all gone! I ansxiously await at the table that Thanksgiving. I '
-                   'see corn on the [noun] and eve the lime [noun/s]. I am relieved when '
+                   'see corn on the [noun] and eve the lime [noun/s] . I am relieved when '
                    'grandma brings out a [noun] for Thanksgiving dinner!'
     },
     {
         'id': 3,
         'title': 'Pizza Pizza',
         'author': 'unknown',
-        'content': 'Pizza was invented by a [adjective] [nationality] chef named [person]. '
-                   'To make a pizza, you need to take a lump of [noun], and make a thin, '
+        'content': 'Pizza was invented by a [adjective] [nationality] chef named [person] . '
+                   'To make a pizza, you need to take a lump of [noun] , and make a thin, '
                    'round [adjective] [noun]. Then you cover it with [adjective] sauce, '
-                   '[adjective] chees, and fresh chopped [noun/s]. Next you have to bake '
-                   'it in a very hot [noun]. When it is done, cut it into [number] [shapes]. '
+                   '[adjective] chees, and fresh chopped [noun/s] . Next you have to bake '
+                   'it in a very hot [noun]. When it is done, cut it into [number] [shapes] . '
                    'Some kids like [food] pizza the best, but my favorite is the [food] pizza. '
                    'If I could, I would eat pizza [number] times a day!'
     }
