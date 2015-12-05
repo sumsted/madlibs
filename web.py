@@ -63,7 +63,7 @@ def get_template():
     return {'templates': templates}
 
 
-@get('/template/<id>')
+@get('/template/<id:int>')
 def get_template(id):
     return templates[id]
 
