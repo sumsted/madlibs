@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>madlibs</title>
+    <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            font-family: 'Fira Mono', monospace;
+            color: #ffffff;
+            background-color: #000000;
+            margin: 0;
+        }
+
+        header {
+            color: orange;
+            font-size: 2em;
+            width: 100%;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        section {
+            width: 60%;
+            margin: 30px auto;
+        }
+
+        @media screen and (max-width: 800px) {
+            section {
+                width: 95%;
+            }
+        }
+
+        article {
+            margin: 20px 0;
+        }
+
+        article.color-0 {
+            color: red;
+        }
+
+        article.color-1 {
+            color: green;
+        }
+
+        article.color-2 {
+            color: blue;
+        }
+
+        article.color-3 {
+            color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+<header>madlibs</header>
+<section>
+    % for i, m in enumerate(madlibs):
+    <article class="color-{{ i%4 }}">
+        {{ m['title'] }}, by {{ m['author'] }}<br/>{{ m['content'] }}
+    </article>
+    % end
+</section>
+</body>
+</html>

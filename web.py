@@ -1,11 +1,12 @@
 import os
-from bottle import run, get, post, request
+from bottle import run, get, post, request, template
 
 
 templates = [
     {
         'id': 0,
-        'name': 'Christmas Tree',
+        'title': 'Christmas Tree',
+        'author': 'unknown',
         'content': 'Every [month] we [verb] to a tree [place] far away. not just any '
                    '[adjective] farm, a [adjective] tree [place]. My dad and I [verb] '
                    'onto the [noun] to [verb] for the perfect [noun]. Some people live '
@@ -16,7 +17,8 @@ templates = [
     },
     {
         'id': 1,
-        'name': 'More Lights!',
+        'title': 'More Lights!',
+        'author': 'unknown',
         'content': 'Did you ever have one of those [noun]? Well today [person] did! Mom '
                    'wanted to [verb] [nouns] up for [holiday]. Not just any lights, '
                    '[color] lights. [Adjective] [color] lights! [Adjective] bright red '
@@ -27,7 +29,8 @@ templates = [
     },
     {
         'id': 2,
-        'name': 'Turkey Dinner!',
+        'title': 'Turkey Dinner!',
+        'author': 'unknown',
         'content': 'I spent last summer on my grandfather\'s [adjective] farm. He raises '
                    '[noun/s] for local food [noun/s]. He also grows corn on the [noun], '
                    '[adjective] lettuce and lima [noun/s]. My favorite place to [verb] '
@@ -39,7 +42,8 @@ templates = [
     },
     {
         'id': 3,
-        'name': 'Pizza Pizza',
+        'title': 'Pizza Pizza',
+        'author': 'unknown',
         'content': 'Pizza was invented by a [adjective] [nationality] chef named [person]. '
                    'To make a pizza, you need to take a lump of [noun], and make a thin, '
                    'round [adjective] [noun]. Then you cover it with [adjective] sauce, '
@@ -50,12 +54,16 @@ templates = [
     }
 ]
 
-madlibs = templates
+madlibs = []
 
 
 @get('/')
 def get_index():
-    return 'welcome to madlib'
+    return template('madlibs', madlibs=reversed(madlibs))
+
+@get('/test')
+def get_index():
+    return template('madlibs', madlibs=reversed(templates))
 
 
 @get('/template')
@@ -95,14 +103,16 @@ def get_madlib(id):
     return madlibs[id]
 
 
-@post('/madblib')
+@post('/madlib')
 def post_madlib():
     madlib = None
     try:
         madlib = request.json
+        if 'title' not in madlib or 'author' not in madlib or 'content' not in madlib:
+            return {'status': 'oops, missing stuff'}
         madlibs.append(madlib)
     except Exception as e:
-        return {'status': 'oops'}
+        return {'status': 'oops, that did not work'}
     return madlib
 
 
