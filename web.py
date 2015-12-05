@@ -19,7 +19,7 @@ templates = [
         'id': 1,
         'title': 'More Lights!',
         'author': 'unknown',
-        'content': 'Did you ever have one of those [noun]? Well today [person] did! Mom '
+        'content': 'Did you ever have one of those [noun] ? Well today [person] did! Mom '
                    'wanted to [verb] [nouns] up for [holiday] . Not just any lights, '
                    '[color] lights. [Adjective] [color] lights! [Adjective] bright red '
                    'lights. The only problem, they are a [verb/ed] mess! Not to mention '
