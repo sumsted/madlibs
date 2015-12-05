@@ -50,7 +50,7 @@ templates = [
     }
 ]
 
-madlibs = []
+madlibs = templates
 
 
 @get('/')
@@ -79,42 +79,31 @@ def post_template():
     return hash_key
 
 
+@get('/clear')
+def get_clear():
+    global madlibs
+    madlibs = []
+
+
+@get('/madlib')
+def get_madlib():
+    return {'madlibs': madlibs}
+
+
+@get('/madlib/<id:int>')
+def get_madlib(id):
+    return madlibs[id]
+
+
 @post('/madblib')
 def post_madlib():
     madlib = None
-    hash_key = {'hash': -1}
     try:
         madlib = request.json
+        madlibs.append(madlib)
     except Exception as e:
-        return hash_key
-    return hash_key
-
-
-@get('/messages')
-def get_messages():
-    return {'messages': messages}
-
-
-@get('/clear')
-def get_messages():
-    global messages
-    messages = [{'name': 'echo', 'message': 'make what you want of this'}]
-    return {'messages': messages}
-
-
-@post('/message')
-def post_message():
-    global messages
-    message = None
-    try:
-        message = request.json
-        if message is None:
-            message = {'user': 'echo', 'message': 'Huh, say something?'}
-    except Exception as e:
-        message = {'user': 'echo', 'message': 'Huh, what?'}
-    messages.append(message)
-    messages = messages[-10:]
-    return {'messages': messages}
+        return {'status': 'oops'}
+    return madlib
 
 
 run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
